@@ -1,0 +1,7 @@
+*.h5
+*.vti
+*.txt
+gprmax_env/
+*.out
+*.in
+first_sim/files/
