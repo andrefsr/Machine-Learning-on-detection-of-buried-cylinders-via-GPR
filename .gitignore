@@ -5,3 +5,5 @@ gprmax_env/
 *.out
 *.in
 first_sim/files/
+articles/
+*.pdf

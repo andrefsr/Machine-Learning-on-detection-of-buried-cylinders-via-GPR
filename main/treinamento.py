@@ -22,8 +22,8 @@ for i in range(1,N+1):
         ez = rx['Ez'][:]
 
     ez_corr = np.zeros((637,60))
-    for j in range(Nf+1,637):
-        for k in range(60):
+    for j in range(Nf+1,637): ### VETORIZAR ISSO AQUI PLMDS (USAR O ILOC DO PANDAS)
+        for k in range(60):   ### PLOTAR TODOS OS PARES POSSIVEIS de Xi com Xj para ver distinção visual e se der aplicar KNN ou Bayes
             ez_corr[j,k] = ez[j,k]
     
     sinal = ez_corr.flatten()
@@ -34,7 +34,10 @@ for i in range(1,N+1):
         np.max(np.abs(sinal)),
         np.sum(sinal**2),
         skew(sinal),
-        kurtosis(sinal)
+        kurtosis(sinal),
+        primeiro harmonico de fourier,
+        segundo, etc...
+        BUSCAR MAIS FEATURES
     ]
 
     x.append(features)
