@@ -10,10 +10,9 @@ for i in range(1,N+1):
 
     tem_cilindro = np.random.rand() > 0.5
 
-    if tem_cilindro:
-        label = 1
-    else:
-        label = 0
+    if tem_cilindro: label = 1
+    else: label = 0
+
     if label == 1:
 
         texto = f"""

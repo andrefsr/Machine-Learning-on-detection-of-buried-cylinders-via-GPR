@@ -39,8 +39,8 @@ for i in range(1,N+1):
 
 df_features = pd.DataFrame(x)
 df_features = df_features.rename(columns={0:'Média',1:'Variância',2:'Máximo',3:'Energia',4:'Skewness',5:'Kurtosis'})
-df_features.to_csv('Features.csv',index=False)
 
+df_features.to_csv('Features.csv',index=False)
 df_labels = pd.read_csv("labels.csv")
 
 data = pd.concat([df_features,df_labels],axis=1)
