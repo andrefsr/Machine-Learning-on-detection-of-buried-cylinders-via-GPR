@@ -38,6 +38,7 @@ for i in range(1,N+1):
         primeiro harmonico de fourier,
         segundo, etc...
         BUSCAR MAIS FEATURES
+        HÁ CORRELAÇÃO ENTRE AS FEATURES!!! VARIANCIA PRECISA DA MÉDIA PARA SER CALCULADA (NÃO NECESSARIAMENTE É UM PROBLEMA) - VERIFICAR
     ]
 
     x.append(features)
