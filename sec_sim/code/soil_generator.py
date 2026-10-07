@@ -24,6 +24,9 @@ for i in range(1,N+1):
 #soil_peplinski: 0.5 0.5 2.0 2.66 0.001 0.25 my_soil
 
 #fractal_box: 0 0 0 0.240 0.170 0.002 1.5 1 1 1 50 my_soil my_fractal_box
+
+ADICIONAR RUGOSIDADE NA SUPERFÍCIE #add_surface_roughness
+
 #cylinder: 0.120 0.080 0 0.120 0.080 0.002 0.01 pec
 
     #geometry_view: 0 0 0 0.240 0.210 0.002 0.002 0.002 0.002 solo{i} n
