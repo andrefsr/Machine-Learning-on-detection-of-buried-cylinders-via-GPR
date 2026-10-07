@@ -21,11 +21,11 @@ for i in range(1,N+1):
 #dx_dy_dz: 0.002 0.002 0.002
 #time_window: 3e-9
 
-#soil_peplinski: 0.5 0.5 2.0 2.66 0.001 0.25 my_soil -----> MUDAR PARÂMETROS A CADA SIMULAÇÃO
+#soil_peplinski: 0.5 0.5 2.0 2.66 0.001 0.25 my_soil ==========> MUDAR PARÂMETROS A CADA SIMULAÇÃO
 
 #fractal_box: 0 0 0 0.240 0.170 0.002 1.5 1 1 1 50 my_soil my_fractal_box
 
-ADICIONAR RUGOSIDADE NA SUPERFÍCIE #add_surface_roughness
+ADICIONAR RUGOSIDADE NA SUPERFÍCIE #add_surface_roughness ====> MUDAR RUGOSIDADE A CADA SIMULAÇÃO
 
 #cylinder: 0.120 0.080 0 0.120 0.080 0.002 0.01 pec
 
