@@ -1,3 +1,13 @@
+'''
+Parâmetro	                       Arenoso	Intermediário	Argiloso
+Areia	                            0,80	    0,60	      0,35
+Argila	                            0,05	    0,20	      0,40
+Densidade aparente (g/cm³)	        1,55	    1,45	      1,30
+Densidade das partículas (g/cm³)	2,66	    2,66	      2,66
+Umidade mínima	                    0,02	    0,03	      0,08
+Umidade máxima	                    0,15	    0,25	      0,30
+'''
+
 import os
 import numpy as np
 import pandas as pd
@@ -22,15 +32,14 @@ for i in range(1,N+1):
 #time_window: 3e-9
 
 #soil_peplinski: 0.5 0.5 2.0 2.66 0.001 0.25 my_soil
-    #   ==========> MUDAR PARÂMETROS A CADA SIMULAÇÃO
 
 #fractal_box: 0 0 0 0.240 0.170 0.002 1.5 1 1 1 50 my_soil my_fractal_box
 
-    ADICIONAR RUGOSIDADE NA SUPERFÍCIE #add_surface_roughness ====> MUDAR RUGOSIDADE A CADA SIMULAÇÃO
+    #add_surface_roughness: 0 0 0.07 0.1 0.1 0.07 1.5 1 1 0.065 0.075 my_fractal_box
 
 #cylinder: 0.120 0.080 0 0.120 0.080 0.002 0.01 pec
 
-    #geometry_view: 0 0 0 0.240 0.210 0.002 0.002 0.002 0.002 solo{i} n
+#geometry_view: 0 0 0 0.240 0.210 0.002 0.002 0.002 0.002 solo{i} n
 #geometry_objects_write: 0 0 0 0.240 0.210 0.002 solo_geom{i}
 """
     with open(f"solo{i}.in", "w") as f:
