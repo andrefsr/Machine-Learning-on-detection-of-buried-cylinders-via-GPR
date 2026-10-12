@@ -16,7 +16,7 @@ import os
 import numpy as np
 import pandas as pd
 
-N = 100 ### Número de solos
+N = 20 ### Número de solos
 
 n = np.random.choice(range(1,4),N)
 
@@ -38,7 +38,7 @@ for i in range(1,N+1):
 
 #cylinder: 0.120 0.080 0 0.120 0.080 0.002 0.01 pec
 
-#geometry_view: 0 0 0 0.240 0.210 0.002 0.002 0.002 0.002 solo{i} n
+    #geometry_view: 0 0 0 0.240 0.210 0.002 0.002 0.002 0.002 solo{i} n
 #geometry_objects_write: 0 0 0 0.240 0.210 0.002 solo_geom{i}
 """
 
