@@ -4,11 +4,14 @@ python -m tools.plot_Bscan Bscan1__merged.out Ez
 
 import os
 
-N = 5
+N = 1
 
 for i in range(1,N+1):
 
     texto = f"""
+
+#num_threads: 10
+
 #title: Bscan {i}
 #domain: 0.240 0.210 0.002
 #dx_dy_dz: 0.002 0.002 0.002

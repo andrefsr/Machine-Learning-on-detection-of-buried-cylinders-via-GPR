@@ -5,6 +5,8 @@ l/d = 10
 
 dx = lambda/100 = 0.002
 
-18.35 segundos para gerar 5 solos. ====> 10 horas para gerar 10.000 solos (SEM OTIMIZAÇÃO)
+18.35 segundos para gerar 5 solos ====> 1 hora para cada 1000 solos (SEM OTIMIZAÇÃO)
 
-01:31.58 por cada simulação (92s) =====> 25.6 horas para cada 1000 simulações
+01:31.58 por cada simulação (92s)  ====> 25.6 horas para cada 1000 simulações (SEM OTIMIZAÇÃO)
+
+01:51.62 para rodar 4 simulações  =====> 7.78 horas para cada 1000 simulações (OTIMIZADO)

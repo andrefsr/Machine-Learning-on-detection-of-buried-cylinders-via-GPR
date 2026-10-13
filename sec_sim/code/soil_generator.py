@@ -8,15 +8,15 @@ Umidade mínima	                    0,02	    0,03	      0,08
 Umidade máxima	                    0,15	    0,25	      0,30
 '''
 
-#soil_peplinski: 0.80 0.05 1.55 2.66 0.02 0.15 arenoso
-#soil_peplinski: 0.60 0.20 1.45 2.66 0.03 0.25 intermediario
-#soil_peplinski: 0.35 0.40 1.30 2.66 0.08 0.30 argiloso
+#soil_peplinski: 0.80 0.05 1.55 2.66 0.02 0.15 arenoso (1)
+#soil_peplinski: 0.60 0.20 1.45 2.66 0.03 0.25 intermediario (2)
+#soil_peplinski: 0.35 0.40 1.30 2.66 0.08 0.30 argiloso (3)
 
 import os
 import numpy as np
 import pandas as pd
 
-N = 5 ### Número de solos
+N = 4 ### Número de solos
 
 n = np.random.choice(range(1,4),N)
 
@@ -38,7 +38,7 @@ for i in range(1,N+1):
 
 #cylinder: 0.120 0.080 0 0.120 0.080 0.002 0.01 pec
 
-#geometry_view: 0 0 0 0.240 0.210 0.002 0.002 0.002 0.002 solo{i} n
+    #geometry_view: 0 0 0 0.240 0.210 0.002 0.002 0.002 0.002 solo{i} n
 #geometry_objects_write: 0 0 0 0.240 0.210 0.002 solo_geom{i}
 """
 
@@ -58,7 +58,7 @@ for i in range(1,N+1):
 
 #cylinder: 0.120 0.080 0 0.120 0.080 0.002 0.01 pec
 
-#geometry_view: 0 0 0 0.240 0.210 0.002 0.002 0.002 0.002 solo{i} n
+    #geometry_view: 0 0 0 0.240 0.210 0.002 0.002 0.002 0.002 solo{i} n
 #geometry_objects_write: 0 0 0 0.240 0.210 0.002 solo_geom{i}
 """
 
@@ -78,7 +78,7 @@ for i in range(1,N+1):
 
 #cylinder: 0.120 0.080 0 0.120 0.080 0.002 0.01 pec
 
-#geometry_view: 0 0 0 0.240 0.210 0.002 0.002 0.002 0.002 solo{i} n
+    #geometry_view: 0 0 0 0.240 0.210 0.002 0.002 0.002 0.002 solo{i} n
 #geometry_objects_write: 0 0 0 0.240 0.210 0.002 solo_geom{i}
 """
 
