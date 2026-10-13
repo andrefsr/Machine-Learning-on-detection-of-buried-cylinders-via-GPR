@@ -1,6 +1,6 @@
 import os
 
-N = 1
+N = 5
 
 for i in range(1,N+1):
 
@@ -8,10 +8,10 @@ for i in range(1,N+1):
 #title: Bscan {i}
 #domain: 0.240 0.210 0.002
 #dx_dy_dz: 0.002 0.002 0.002
-#time_window: 3e-9
+#time_window: 3e-9 
 
-    #waveform: ricker 1 3e9 my_ricker
-    #hertzian_dipole: z 0.100 0.170 0 my_ricker 
+#waveform: ricker 1 1.5e9 my_ricker
+#hertzian_dipole: z 0.100 0.170 0 my_ricker 
 #rx: 0.080 0.170 0
 #src_steps: 0.002 0 0
 #rx_steps: 0.002 0 0

@@ -16,7 +16,7 @@ import os
 import numpy as np
 import pandas as pd
 
-N = 20 ### Número de solos
+N = 5 ### Número de solos
 
 n = np.random.choice(range(1,4),N)
 
@@ -34,11 +34,11 @@ for i in range(1,N+1):
 
 #fractal_box: 0 0 0 0.240 0.170 0.002 1.5 1 1 1 50 arenoso my_fractal_box
 
-    #add_surface_roughness: 0 0 0.07 0.1 0.1 0.07 1.5 1 1 0.065 0.075 my_fractal_box
+    #add_surface_roughness: 0 0 0.002 0.240 0.170 0.002 1.5 1 1 0.001 0.003 my_fractal_box
 
 #cylinder: 0.120 0.080 0 0.120 0.080 0.002 0.01 pec
 
-    #geometry_view: 0 0 0 0.240 0.210 0.002 0.002 0.002 0.002 solo{i} n
+#geometry_view: 0 0 0 0.240 0.210 0.002 0.002 0.002 0.002 solo{i} n
 #geometry_objects_write: 0 0 0 0.240 0.210 0.002 solo_geom{i}
 """
 
@@ -54,7 +54,11 @@ for i in range(1,N+1):
 
 #fractal_box: 0 0 0 0.240 0.170 0.002 1.5 1 1 1 50 intermediario my_fractal_box
 
-    #geometry_view: 0 0 0 0.240 0.210 0.002 0.002 0.002 0.002 solo{i} n
+    #add_surface_roughness: 0 0 0.002 0.240 0.170 0.002 1.5 1 1 0.001 0.003 my_fractal_box
+
+#cylinder: 0.120 0.080 0 0.120 0.080 0.002 0.01 pec
+
+#geometry_view: 0 0 0 0.240 0.210 0.002 0.002 0.002 0.002 solo{i} n
 #geometry_objects_write: 0 0 0 0.240 0.210 0.002 solo_geom{i}
 """
 
@@ -70,7 +74,11 @@ for i in range(1,N+1):
 
 #fractal_box: 0 0 0 0.240 0.170 0.002 1.5 1 1 1 50 argiloso my_fractal_box
 
-    #geometry_view: 0 0 0 0.240 0.210 0.002 0.002 0.002 0.002 solo{i} n
+    #add_surface_roughness: 0 0 0.002 0.240 0.170 0.002 1.5 1 1 0.001 0.003 my_fractal_box
+
+#cylinder: 0.120 0.080 0 0.120 0.080 0.002 0.01 pec
+
+#geometry_view: 0 0 0 0.240 0.210 0.002 0.002 0.002 0.002 solo{i} n
 #geometry_objects_write: 0 0 0 0.240 0.210 0.002 solo_geom{i}
 """
 
