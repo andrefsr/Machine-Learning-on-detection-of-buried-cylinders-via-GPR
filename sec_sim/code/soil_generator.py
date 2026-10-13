@@ -36,7 +36,7 @@ for i in range(1,N+1):
 
     #add_surface_roughness: 0 0 0.002 0.240 0.170 0.002 1.5 1 1 0.001 0.003 my_fractal_box
 
-#cylinder: 0.210 0.080 0 0.210 0.080 0.002 0.02 pec
+#cylinder: 0.210 0.080 0 0.210 0.080 0.002 0.006 pec
 
 #geometry_view: 0 0 0 0.240 0.210 0.002 0.002 0.002 0.002 solo{i} n
 #geometry_objects_write: 0 0 0 0.240 0.210 0.002 solo_geom{i}
@@ -56,7 +56,7 @@ for i in range(1,N+1):
 
     #add_surface_roughness: 0 0 0.002 0.240 0.170 0.002 1.5 1 1 0.001 0.003 my_fractal_box
 
-#cylinder: 0.210 0.080 0 0.210 0.080 0.002 0.02 pec
+#cylinder: 0.210 0.080 0 0.210 0.080 0.002 0.006 pec
 
 #geometry_view: 0 0 0 0.240 0.210 0.002 0.002 0.002 0.002 solo{i} n
 #geometry_objects_write: 0 0 0 0.240 0.210 0.002 solo_geom{i}
@@ -76,7 +76,7 @@ for i in range(1,N+1):
 
     #add_surface_roughness: 0 0 0.002 0.240 0.170 0.002 1.5 1 1 0.001 0.003 my_fractal_box
 
-#cylinder: 0.210 0.080 0 0.210 0.080 0.002 0.02 pec
+#cylinder: 0.210 0.080 0 0.210 0.080 0.002 0.006 pec
 
 #geometry_view: 0 0 0 0.240 0.210 0.002 0.002 0.002 0.002 solo{i} n
 #geometry_objects_write: 0 0 0 0.240 0.210 0.002 solo_geom{i}
