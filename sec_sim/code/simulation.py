@@ -31,7 +31,8 @@ def executar_simulacao(i):
 
     if not arquivo_mat.exists():
         return i, False, f"Arquivo ausente: {arquivo_mat.name}"
-
+    
+                ### DESCENTRALIZAR A POSIÇÃO DA ANTENA!!!!
     texto = f"""
 #title: Bscan {i}
 #num_threads: 1
@@ -54,12 +55,7 @@ def executar_simulacao(i):
         # Executa no mesmo ambiente Python do script
         with open(arquivo_log, "w", encoding="utf-8") as log:
             subprocess.run(
-                [
-                    sys.executable,
-                    "-m", "gprMax",
-                    str(arquivo_in),
-                    "-n", str(N_TRACES)
-                ],
+                [sys.executable, "-m", "gprMax", str(arquivo_in), "-n", str(N_TRACES)],
                 stdout=log,
                 stderr=subprocess.STDOUT,
                 check=True,
@@ -80,16 +76,12 @@ if __name__ == "__main__":
 
     with ProcessPoolExecutor(max_workers=NUM_WORKERS) as executor:
 
-        tarefas = {
-            executor.submit(executar_simulacao, i): i
-            for i in range(1, N + 1)
-        }
+        tarefas = {executor.submit(executar_simulacao, i): i for i in range(1, N + 1)}
 
         for tarefa in as_completed(tarefas):
             i, sucesso, mensagem = tarefa.result()
 
-            if sucesso:
-                concluidas += 1
+            if sucesso: concluidas += 1
             else:
                 falhas.append((i, mensagem))
                 print(f"Falha no caso {i}: {mensagem}")
@@ -97,11 +89,7 @@ if __name__ == "__main__":
             total = concluidas + len(falhas)
 
             if total % 25 == 0 or total == N:
-                print(
-                    f"Progresso: {total}/{N} | "
-                    f"Concluídas: {concluidas} | "
-                    f"Falhas: {len(falhas)}"
-                )
+                print(f"Progresso: {total}/{N} | " f"Concluídas: {concluidas} | " f"Falhas: {len(falhas)}")
 
     # Salva o relatório para retomar os casos com falha
     with open("falhas_simulacoes.txt", "w", encoding="utf-8") as f:
