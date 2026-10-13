@@ -10,3 +10,7 @@ dx = lambda/100 = 0.002
 01:31.58 por cada simulação (92s)  ====> 25.6 horas para cada 1000 simulações (SEM OTIMIZAÇÃO)
 
 01:51.62 para rodar 4 simulações  =====> 7.78 horas para cada 1000 simulações (OTIMIZADO)
+
+01:50 para gerar um solo 3D (descartado)
+
+Raio máximo e mínimo para o cilindro : 0.006 e 0.02

@@ -8,19 +8,15 @@ import subprocess
 from pathlib import Path
 from concurrent.futures import ProcessPoolExecutor, as_completed
 
-# =========================================================
 # CONFIGURAÇÕES
-# =========================================================
 
 N = 4
-NUM_WORKERS = 4
+NUM_WORKERS = 4 # Ótimo
 N_TRACES = 60
 
 PASTA = Path.cwd()
 
-# =========================================================
 # FUNÇÃO: GERA E EXECUTA UMA SIMULAÇÃO
-# =========================================================
 
 def executar_simulacao(i):
 
@@ -75,10 +71,7 @@ def executar_simulacao(i):
     except Exception as erro:
         return i, False, str(erro)
 
-
-# =========================================================
 # EXECUÇÃO PARALELA
-# =========================================================
 
 if __name__ == "__main__":
 
