@@ -18,65 +18,50 @@ import pandas as pd
 
 N = 4 ### Número de solos
 
-n = np.random.choice(range(1,4),N)
+obj = []
 
 for i in range(1,N+1):
 
-    if n[i-1] == 1: ### SOLO ARENOSO
+    soil_type = np.random.choice(range(1,4))
+    radius = np.random.choice(np.linspace(0.006,0.020,20))
+    y = np.random.choice(np.linspace(0.080,0.130,20))
+    x = np.random.choice(np.linspace(0.030,0.210,20))
+    
 
-        texto = f"""
+    if soil_type == 1: ### SOLO ARENOSO
+        sand = '0.80'
+        clay = '0.05'
+        dens = '1.55'
+        u_min = '0.02'
+        u_max = '0.15'
+
+    elif soil_type == 2: ### SOLO INTERMEDIÁRIO
+        sand = '0.60'
+        clay = '0.20'
+        dens = '1.45'
+        u_min = '0.03'
+        u_max = '0.25'
+
+    elif soil_type == 3: ### SOLO ARGILOSO
+        sand = '0.35'
+        clay = '0.40'
+        dens = '1.30'
+        u_min = '0.08'
+        u_max = '0.30'
+
+    texto = f"""
 #title: Solo {i}
 #domain: 0.240 0.210 0.002
 #dx_dy_dz: 0.002 0.002 0.002
 #time_window: 3e-9
 
-#soil_peplinski: 0.80 0.05 1.55 2.66 0.02 0.15 arenoso
+#soil_peplinski: {sand} {clay} {dens} 2.66 {u_min} {u_max} my_soil
 
-#fractal_box: 0 0 0 0.240 0.170 0.002 1.5 1 1 1 50 arenoso my_fractal_box
+#fractal_box: 0 0 0 0.240 0.170 0.002 1.5 1 1 1 50 my_soil my_fractal_box
 
-    #add_surface_roughness: 0 0 0.002 0.240 0.170 0.002 1.5 1 1 0.001 0.003 my_fractal_box
+#add_surface_roughness: 0 0.170 0 0.240 0.170 0.002 1.5 1 1 0.164 0.176 my_fractal_box
 
-#cylinder: 0.210 0.080 0 0.210 0.080 0.002 0.006 pec
-
-#geometry_view: 0 0 0 0.240 0.210 0.002 0.002 0.002 0.002 solo{i} n
-#geometry_objects_write: 0 0 0 0.240 0.210 0.002 solo_geom{i}
-"""
-
-    if n[i-1] == 2: ### SOLO INTERMEDIÁRIO
-
-        texto = f"""
-#title: Solo {i}
-#domain: 0.240 0.210 0.002
-#dx_dy_dz: 0.002 0.002 0.002
-#time_window: 3e-9
-
-#soil_peplinski: 0.60 0.20 1.45 2.66 0.03 0.25 intermediario
-
-#fractal_box: 0 0 0 0.240 0.170 0.002 1.5 1 1 1 50 intermediario my_fractal_box
-
-    #add_surface_roughness: 0 0 0.002 0.240 0.170 0.002 1.5 1 1 0.001 0.003 my_fractal_box
-
-#cylinder: 0.210 0.080 0 0.210 0.080 0.002 0.006 pec
-
-#geometry_view: 0 0 0 0.240 0.210 0.002 0.002 0.002 0.002 solo{i} n
-#geometry_objects_write: 0 0 0 0.240 0.210 0.002 solo_geom{i}
-"""
-
-    if n[i-1] == 3: ### SOLO ARGILOSO
-
-        texto = f"""
-#title: Solo {i}
-#domain: 0.240 0.210 0.002
-#dx_dy_dz: 0.002 0.002 0.002
-#time_window: 3e-9
-
-#soil_peplinski: 0.35 0.40 1.30 2.66 0.08 0.30 argiloso
-
-#fractal_box: 0 0 0 0.240 0.170 0.002 1.5 1 1 1 50 argiloso my_fractal_box
-
-    #add_surface_roughness: 0 0 0.002 0.240 0.170 0.002 1.5 1 1 0.001 0.003 my_fractal_box
-
-#cylinder: 0.210 0.080 0 0.210 0.080 0.002 0.006 pec
+#cylinder: {x} {y} 0 {x} {y} 0.002 {radius} pec
 
 #geometry_view: 0 0 0 0.240 0.210 0.002 0.002 0.002 0.002 solo{i} n
 #geometry_objects_write: 0 0 0 0.240 0.210 0.002 solo_geom{i}
@@ -90,6 +75,8 @@ for i in range(1,N+1):
     os.remove(f"solo{i}.in")
     os.remove(f"solo{i}.out")
 
-df_label = pd.DataFrame(n)
-df_label = df_label.rename(columns={0:"Label"}) 
+    obj.append([soil_type,radius,y,x])
+
+df_label = pd.DataFrame(obj)
+df_label = df_label.rename(columns={0:"soil",1:'radius',2:'height',3:'distance'}) 
 df_label.to_csv('labels.csv', index=False)
