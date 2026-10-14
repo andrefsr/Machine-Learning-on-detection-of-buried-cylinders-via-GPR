@@ -16,7 +16,7 @@ import os
 import numpy as np
 import pandas as pd
 
-N = 4 ### Número de solos
+N = 1000 ### Número de solos
 
 obj = []
 
@@ -27,7 +27,6 @@ for i in range(1,N+1):
     y = np.random.choice(np.linspace(0.080,0.130,20))
     x = np.random.choice(np.linspace(0.030,0.210,20))
     
-
     if soil_type == 1: ### SOLO ARENOSO
         sand = '0.80'
         clay = '0.05'
@@ -63,7 +62,7 @@ for i in range(1,N+1):
 
 #cylinder: {x} {y} 0 {x} {y} 0.002 {radius} pec
 
-#geometry_view: 0 0 0 0.240 0.210 0.002 0.002 0.002 0.002 solo{i} n
+    #geometry_view: 0 0 0 0.240 0.210 0.002 0.002 0.002 0.002 solo{i} n
 #geometry_objects_write: 0 0 0 0.240 0.210 0.002 solo_geom{i}
 """
 

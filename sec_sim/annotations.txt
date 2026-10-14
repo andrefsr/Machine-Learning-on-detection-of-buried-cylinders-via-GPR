@@ -17,4 +17,4 @@ Raio mínimo e máximo para o cilindro ====> rmin = 0.006 e rmax = 0.020
 Altura mínima e máxima               ====> hmin = 0.080 e hmax = 0.130
 Distância mínima e máxima            ====> xmin = 0.030 e xmax = 0.210
 
-ADICIONAR SURFACE_ROUGHNESS E ARRUMAR A POSIÇÃO DA ANTENA
+ARRUMAR A POSIÇÃO DA ANTENA
