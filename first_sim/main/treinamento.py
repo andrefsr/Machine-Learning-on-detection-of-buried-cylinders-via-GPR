@@ -9,14 +9,15 @@ from sklearn.metrics import confusion_matrix
 from sklearn.metrics import classification_report
 import matplotlib.pyplot as plt
 
-N = 1000
+N = 500
 x = []
 dt = 3e-9/637
 tf = 1.6e-9
 Nf = int(tf/dt)
 T = 3e-9
 
-for i in range(1,N+1):
+for i in range(5,N+1):
+    
     with h5py.File(f'Bscan{i}__merged.out', 'r') as f:
         rx = f['rxs/rx1']
         ez = rx['Ez'][:]
@@ -34,11 +35,11 @@ for i in range(1,N+1):
         np.max(np.abs(sinal)),
         np.sum(sinal**2),
         skew(sinal),
-        kurtosis(sinal),
-        primeiro harmonico de fourier,
-        segundo, etc...
-        BUSCAR MAIS FEATURES
-        HÁ CORRELAÇÃO ENTRE AS FEATURES!!! VARIANCIA PRECISA DA MÉDIA PARA SER CALCULADA (NÃO NECESSARIAMENTE É UM PROBLEMA) - VERIFICAR
+        kurtosis(sinal)#,
+        #primeiro harmonico de fourier,
+        #segundo, etc...
+        #BUSCAR MAIS FEATURES
+        #HÁ CORRELAÇÃO ENTRE AS FEATURES!!! VARIANCIA PRECISA DA MÉDIA PARA SER CALCULADA (NÃO NECESSARIAMENTE É UM PROBLEMA) - VERIFICAR
     ]
 
     x.append(features)

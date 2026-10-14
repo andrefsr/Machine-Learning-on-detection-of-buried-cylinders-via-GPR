@@ -10,7 +10,7 @@ from concurrent.futures import ProcessPoolExecutor, as_completed
 
 # CONFIGURAÇÕES
 
-N = 500
+N = 4
 NUM_WORKERS = 4 # Ótimo
 N_TRACES = 60
 
