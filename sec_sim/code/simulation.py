@@ -9,8 +9,7 @@ from pathlib import Path
 from concurrent.futures import ProcessPoolExecutor, as_completed
 
 # CONFIGURAÇÕES
-
-Ni = 501
+Ni = 751
 Nf = 1000
 NUM_WORKERS = 4 # Ótimo
 N_TRACES = 60
@@ -18,7 +17,6 @@ N_TRACES = 60
 PASTA = Path.cwd()
 
 # FUNÇÃO: GERA E EXECUTA UMA SIMULAÇÃO
-
 def executar_simulacao(i):
 
     arquivo_h5 = PASTA / f"solo_geom{i}.h5"
@@ -69,7 +67,6 @@ def executar_simulacao(i):
         return i, False, str(erro)
 
 # EXECUÇÃO PARALELA
-
 if __name__ == "__main__":
 
     concluidas = 0
