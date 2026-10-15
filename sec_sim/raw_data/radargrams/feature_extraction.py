@@ -3,6 +3,8 @@ import pandas as pd
 import numpy as np
 from scipy.stats import skew, kurtosis
 
+import matplotlib.pyplot as plt
+
 N = 500
 x = []
 dt = 3e-9/637
@@ -15,10 +17,16 @@ for i in range(1,N+1):
         rx = f['rxs/rx1']
         ez = rx['Ez'][:]
 
-    ez_corr = np.zeros((637,60)) ### ROI - Region of Interest
-    for j in range(Nf+1,637): ### VETORIZAR ISSO AQUI PLMDS (USAR O ILOC DO PANDAS)
-        for k in range(60):   ### PLOTAR TODOS OS PARES POSSIVEIS de Xi com Xj para ver distinção visual e se der aplicar KNN ou Bayes
-            ez_corr[j,k] = ez[j,k]
+    ez_corr = np.zeros((637,60)) ### ROI - Region of Interest  
+    ez_corr = ez[Nf+1:637,0:60]
+
+    # plt.imshow(ez,cmap='viridis')
+    # plt.colorbar()
+    # plt.show()
+
+    # plt.imshow(ez_corr,cmap='viridis')
+    # plt.colorbar()
+    # plt.show()
     
     sinal = ez_corr.flatten()
 
@@ -40,7 +48,4 @@ for i in range(1,N+1):
 df_features = pd.DataFrame(x)
 df_features = df_features.rename(columns={0:'Média',1:'Variância',2:'Máximo',3:'Energia',4:'Skewness',5:'Kurtosis'})
 
-df_features.to_csv('Features.csv',index=False)
-#df_labels = pd.read_csv("labels.csv")
-
-#data = pd.concat([df_features,df_labels],axis=1)
+#df_features.to_csv('Features.csv',index=False)

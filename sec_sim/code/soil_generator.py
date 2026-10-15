@@ -78,5 +78,5 @@ for i in range(Ni,Nf+1):
     obj.append([soil_type,radius,y,x])
 
 df_label = pd.DataFrame(obj)
-df_label = df_label.rename(columns={0:"soil",1:'radius',2:'height',3:'distance'}) 
+df_label = df_label.rename(columns={0:"soil_type",1:'radius',2:'pos_y',3:'pos_x'}) 
 df_label.to_csv('labels.csv', index=False)
