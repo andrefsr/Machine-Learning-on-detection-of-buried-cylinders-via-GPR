@@ -16,11 +16,12 @@ import os
 import numpy as np
 import pandas as pd
 
-N = 1000 ### Número de solos
+Ni = 1001
+Nf = 2000 ### Número de solos
 
 obj = []
 
-for i in range(1,N+1):
+for i in range(Ni,Nf+1):
 
     soil_type = np.random.choice(range(1,4))
     radius = np.random.choice(np.linspace(0.006,0.020,20))

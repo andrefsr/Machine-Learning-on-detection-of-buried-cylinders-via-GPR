@@ -10,7 +10,8 @@ from concurrent.futures import ProcessPoolExecutor, as_completed
 
 # CONFIGURAÇÕES
 
-N = 4
+Ni = 501
+Nf = 1000
 NUM_WORKERS = 4 # Ótimo
 N_TRACES = 60
 
@@ -76,7 +77,7 @@ if __name__ == "__main__":
 
     with ProcessPoolExecutor(max_workers=NUM_WORKERS) as executor:
 
-        tarefas = {executor.submit(executar_simulacao, i): i for i in range(1, N + 1)}
+        tarefas = {executor.submit(executar_simulacao, i): i for i in range(Ni, Nf + 1)}
 
         for tarefa in as_completed(tarefas):
             i, sucesso, mensagem = tarefa.result()
@@ -88,8 +89,8 @@ if __name__ == "__main__":
 
             total = concluidas + len(falhas)
 
-            if total % 25 == 0 or total == N:
-                print(f"Progresso: {total}/{N} | " f"Concluídas: {concluidas} | " f"Falhas: {len(falhas)}")
+            if total % 25 == 0 or total == Nf:
+                print(f"Progresso: {total}/{Nf} | " f"Concluídas: {concluidas} | " f"Falhas: {len(falhas)}")
 
     # Salva o relatório para retomar os casos com falha
     with open("falhas_simulacoes.txt", "w", encoding="utf-8") as f:
