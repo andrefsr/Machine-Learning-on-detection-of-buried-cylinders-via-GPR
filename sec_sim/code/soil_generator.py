@@ -17,7 +17,7 @@ import numpy as np
 import pandas as pd
 
 Ni = 1501
-Nf = 2000 ### Número de solos
+Nf = 3000 ### Número de solos
 
 obj = []
 
