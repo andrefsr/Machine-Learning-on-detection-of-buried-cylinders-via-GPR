@@ -1,7 +1,7 @@
 import os
 
-Ni = 751
-Nf = 1000
+Ni = 1501
+Nf = 2000
 
 for i in range(Ni,Nf+1):
     os.system(f"python -m tools.outputfiles_merge Bscan{i}_ --remove-files")
