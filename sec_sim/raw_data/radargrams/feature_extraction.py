@@ -5,7 +5,7 @@ from scipy.stats import skew, kurtosis
 
 import matplotlib.pyplot as plt
 
-N = 2000
+N = 3000
 x = []
 dt = 3e-9/637
 tf = 1.6e-9
