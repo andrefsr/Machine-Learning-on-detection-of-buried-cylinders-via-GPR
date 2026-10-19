@@ -38,7 +38,6 @@ for i in range(1,N+1):
         np.sum(sinal**2),
         skew(sinal),
         kurtosis(sinal)
-
     ]
 
     x.append(features)
