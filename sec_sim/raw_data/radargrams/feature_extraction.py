@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 N = 3000
 x = []
 dt = 3e-9/637
+dx = 0.002
 tf = 1.6e-9
 Nf = int(tf/dt)
 T = 3e-9
@@ -37,10 +38,7 @@ for i in range(1,N+1):
         np.sum(sinal**2),
         skew(sinal),
         kurtosis(sinal)
-        #primeiro harmonico de fourier,
-        #segundo, etc...
-        #BUSCAR MAIS FEATURES
-        #HÁ CORRELAÇÃO ENTRE AS FEATURES!!! VARIANCIA PRECISA DA MÉDIA PARA SER CALCULADA (NÃO NECESSARIAMENTE É UM PROBLEMA) - VERIFICAR
+
     ]
 
     x.append(features)
