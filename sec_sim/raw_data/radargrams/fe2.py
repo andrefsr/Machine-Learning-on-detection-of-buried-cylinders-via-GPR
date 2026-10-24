@@ -124,7 +124,8 @@ x = []
 dt = 3e-9/637
 dx = 0.002
 tf = 1.6e-9
-Nf = int(tf/dt)
+# Nf = int(tf/dt)
+Nf = 360
 T = 3e-9
 
 # x = []
@@ -157,7 +158,7 @@ for i in range(1, N + 1):
         rx = f['rxs/rx1']
         ez = rx['Ez'][:]
 
-    # Recorte da região de interesse
+    # Recorte da região de interesse - ROI
     ez_corr = ez[Nf + 1:637, 0:60]
 
     # Extrai um dicionário de features por B-scan
@@ -184,7 +185,7 @@ colunas = ['id'] + [c for c in X.columns if c != 'id']
 X = X[colunas]
 
 # Exporta para CSV
-X.to_csv('Features.csv', index=False)
+X.to_csv('features_teste2.csv', index=False)
 
 print('\nDimensões da tabela:', X.shape)
 print(X.head())
