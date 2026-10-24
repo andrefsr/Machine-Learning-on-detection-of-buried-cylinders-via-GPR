@@ -18,3 +18,5 @@ Altura mínima e máxima               ====> hmin = 0.080 e hmax = 0.130
 Distância mínima e máxima            ====> xmin = 0.030 e xmax = 0.210
 
 ARRUMAR A POSIÇÃO DA ANTENA
+
+Base de dados ideal com 20.000 observações ====> Nesse caso, para cada valor de raio teríamos 1.000 dados !!!
