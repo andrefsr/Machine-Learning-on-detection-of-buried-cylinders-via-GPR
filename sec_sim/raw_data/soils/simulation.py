@@ -69,7 +69,7 @@ def executar_simulacao(i):
 # EXECUÇÃO PARALELA
 if __name__ == "__main__":
 
-    concluidas = 0
+    concluidas = Ni
     falhas = []
 
     with ProcessPoolExecutor(max_workers=NUM_WORKERS) as executor:
