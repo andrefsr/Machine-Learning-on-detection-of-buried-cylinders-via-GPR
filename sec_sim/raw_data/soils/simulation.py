@@ -9,8 +9,8 @@ from pathlib import Path
 from concurrent.futures import ProcessPoolExecutor, as_completed
 
 # CONFIGURAÇÕES
-Ni = 2501
-Nf = 3000
+Ni = 4001
+Nf = 5000
 NUM_WORKERS = 3 # Ótimo
 N_TRACES = 60
 

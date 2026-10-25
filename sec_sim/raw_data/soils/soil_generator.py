@@ -16,8 +16,8 @@ import os
 import numpy as np
 import pandas as pd
 
-Ni = 3001
-Nf = 4000 ### Número de solos
+Ni = 4001
+Nf = 5000 ### Número de solos
 
 obj = []
 
@@ -79,4 +79,4 @@ for i in range(Ni,Nf+1):
 
 df_label = pd.DataFrame(obj)
 df_label = df_label.rename(columns={0:"soil_type",1:'radius',2:'pos_y',3:'pos_x'}) 
-df_label.to_csv('labels.csv', index=False)
+df_label.to_csv(f'labels{Ni}-{Nf}.csv', index=False)
