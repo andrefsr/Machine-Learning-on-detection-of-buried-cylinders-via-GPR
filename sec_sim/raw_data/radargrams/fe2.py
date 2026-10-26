@@ -119,7 +119,7 @@ def extrair_features(Ez, dt, dx):
 
     return features
 
-N = 3000
+N = 5000
 x = []
 dt = 3e-9/637
 dx = 0.002
@@ -185,7 +185,7 @@ colunas = ['id'] + [c for c in X.columns if c != 'id']
 X = X[colunas]
 
 # Exporta para CSV
-X.to_csv('features_teste2.csv', index=False)
+X.to_csv('features5k.csv', index=False)
 
 print('\nDimensões da tabela:', X.shape)
 print(X.head())

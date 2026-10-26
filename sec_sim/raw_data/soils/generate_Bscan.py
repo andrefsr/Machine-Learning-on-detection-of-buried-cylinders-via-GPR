@@ -1,6 +1,6 @@
 import os
 
-Ni = 4001
+Ni = 4924
 Nf = 5000
 
 for i in range(Ni,Nf+1):
