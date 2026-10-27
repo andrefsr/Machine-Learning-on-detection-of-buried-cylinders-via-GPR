@@ -128,26 +128,6 @@ tf = 1.6e-9
 Nf = 360
 T = 3e-9
 
-# x = []
-
-# for i in range(1,N+1):
-#     with h5py.File(f'Bscan{i}__merged.out', 'r') as f:
-#         rx = f['rxs/rx1']
-#         ez = rx['Ez'][:]
-
-#     ez_corr = np.zeros((637,60)) ### ROI - Region of Interest  
-#     ez_corr = ez[Nf+1:637,0:60]
-
-#     lista_features = [extrair_features(ez_corr, dt=dt, dx=dx)]
-
-#     x.append(lista_features)
-
-# X = pd.DataFrame(x)
-# X.to_csv('Features.csv',index=False)
-
-# print(X.shape)
-# print(X.head())
-
 lista_features = []
 
 for i in range(1, N + 1):
@@ -162,11 +142,7 @@ for i in range(1, N + 1):
     ez_corr = ez[Nf + 1:637, 0:60]
 
     # Extrai um dicionário de features por B-scan
-    features = extrair_features(
-        ez_corr,
-        dt=dt,
-        dx=dx
-    )
+    features = extrair_features(ez_corr,dt=dt,dx=dx)
 
     # Identificação da simulação
     features['id'] = i
