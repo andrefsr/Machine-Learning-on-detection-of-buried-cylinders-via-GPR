@@ -17,7 +17,7 @@ import numpy as np
 import pandas as pd
 
 Ni = 1
-Nf = 10 ### Número de solos
+Nf = 3 ### Número de solos
 
 obj = []
 
