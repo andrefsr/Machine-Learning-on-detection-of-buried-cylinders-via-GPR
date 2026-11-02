@@ -8,3 +8,5 @@ first_sim/files/
 articles/
 *.pdf
 *.npy
+*.npz
+*.pt
