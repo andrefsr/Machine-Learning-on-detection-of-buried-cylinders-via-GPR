@@ -1,4 +1,5 @@
 '''
+
 Parâmetro	                       Arenoso	Intermediário	Argiloso
 Areia	                            0,80	    0,60	      0,35
 Argila	                            0,05	    0,20	      0,40
@@ -6,6 +7,7 @@ Densidade aparente (g/cm³)	        1,55	    1,45	      1,30
 Densidade das partículas (g/cm³)	2,66	    2,66	      2,66
 Umidade mínima	                    0,02	    0,03	      0,08
 Umidade máxima	                    0,15	    0,25	      0,30
+
 '''
 
 #soil_peplinski: 0.80 0.05 1.55 2.66 0.02 0.15 arenoso (1)
